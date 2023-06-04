@@ -402,7 +402,22 @@ footer nav p:hover::before {
 }
 
 
-/*Ajustes 1133px*/
+/*Ajustes 1500px*/
+
+@media screen and (min-width: 1500px) {
+    footer {
+        background-color: var(--background-color2);
+    }
+    footer nav {
+        background-color: transparent;
+    }
+    footer nav:hover {
+        transform: translateY(0px);
+    }
+}
+
+
+/*Ajustes 1200px*/
 
 @media screen and (max-width: 1200px) {
     footer {
@@ -452,24 +467,40 @@ footer nav p:hover::before {
 }
 
 
-/*Ajustes 500px*/
-
-@media screen and (max-width: 500px) {
-    .darklabel::after {
-        display: block;
-    }
-}
-
-
 /*Celular*/
 
 @media screen and (max-width: 767px) {
     /*muda a posição do footer para colunas*/
+    .dtq {
+        font-size: 43px;
+    }
+    .container {
+        padding: 0 30px;
+    }
+    .container h2 {
+        font-size: 33px;
+    }
+    /*.container p {
+        font-size: 15px;
+    }*/
+    .container button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
     footer {
         flex-direction: column;
         padding-top: 30px;
     }
     footer nav {
         width: 100%;
+    }
+}
+
+
+/*Ajustes 500px*/
+
+@media screen and (max-width: 500px) {
+    .darklabel::after {
+        display: block;
     }
 }
