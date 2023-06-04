@@ -1,0 +1,475 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /*border: 1px solid red;*/
+}
+
+:root {
+    /*Variáveis para a troca de tema*/
+    --background-color: #fff;
+    /*--background-color2: #eceff1;*/
+    --background-color2: #f3f3f3;
+    --color-text: #111111;
+    --color-text2: #111111;
+}
+
+
+/*html {
+    Suavização no scroll
+    scroll-behavior: smooth;
+    Ajuste para o conteúdo ficar afastado do menu superior durante a navegação
+    scroll-padding-top: 100px;
+}*/
+
+body {
+    background-color: var(--background-color);
+    color: var(--color-text);
+}
+
+main {
+    /*div que engloba todo conteúdo da tela*/
+    width: 100%;
+    position: absolute;
+    padding: 100px 0 0;
+    z-index: -2;
+    transition: 0.3s ease-in-out;
+}
+
+figure {
+    /*classe de ilustrações laterais*/
+    position: fixed;
+    top: 50%;
+    left: 73vw;
+    z-index: -1;
+}
+
+figure img {
+    opacity: 0;
+    position: absolute;
+    max-height: 600px;
+    height: 24vw;
+    width: auto;
+    opacity: 0;
+    /*transform: translate(-50% -50%);*/
+    transition: 0.6s ease-out;
+    animation: float 3s infinite ease-in-out;
+}
+
+figure .selected {
+    opacity: 1;
+}
+
+
+/*destaques para os textos*/
+
+@keyframes float {
+    from {
+        transform: translate(-50%, -50%)
+    }
+    50% {
+        transform: translate(-50%, -56%)
+    }
+    to {
+        transform: translate(-50%, -50%)
+    }
+}
+
+.gradiente {
+    /*classe para deixar textos em gradiente*/
+    background-image: linear-gradient(to right, #ff6600, #ffbf00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dtq {
+    /*classe para destacar títulos*/
+    font-size: 55px;
+    padding-left: 7px;
+    color: #ff6600;
+}
+
+
+/*mudar para o tema escuro*/
+
+#darkmode {
+    /*Deixar o checkbox #darkmode (checkbox reponsável pela troca de tema) invisível*/
+    display: none;
+}
+
+#darkmode:checked+main {
+    /*Se: checkbox #darkmode estiver checado - Então: mudar as variáveis para o tema escuro*/
+    --background-color: #111111;
+    --background-color2: #0f0f0f;
+    --color-text: #fff;
+    --color-text2: #666666;
+    background-color: var(--background-color);
+    color: var(--color-text);
+}
+
+.darklabel {
+    /*Criando uma label vinculada ao checkbox da troca de tema*/
+    color: #111111;
+    margin-left: auto;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.2s ease-in-out;
+}
+
+.darklabel:hover {
+    /*Troca a cor da label para branco ao passar o mouse sobre ela*/
+    color: #fff;
+    text-shadow: 0 0 17px #fff;
+}
+
+.darklabel::after {
+    /*Texto especificando a cor do tema do site (ficará ao lado da label)*/
+    content: " Claro";
+}
+
+#darkmode:checked+main .darklabel::after {
+    /*Se: checkbox #darkmode estiver checado - Então: mudar a especificação do tema para "Escuro"*/
+    content: " Escuro";
+}
+
+
+/*menu superior*/
+
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 0 3%;
+    background-image: linear-gradient(to right, #ff6600, #ffbf00);
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#button-menu {
+    display: none;
+    position: relative;
+    max-width: 30px;
+    max-height: 30px;
+    cursor: pointer;
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
+}
+
+#button-menu img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*.logo {
+    position: relative;
+    max-width: 80px;
+    cursor: pointer;
+    margin-right: auto;
+}*/
+
+#feltz {
+    position: relative;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: auto;
+    transition: 0.3s ease-in-out;
+}
+
+#feltz:hover {
+    text-shadow: 0 0 17px #fff;
+}
+
+#menu {
+    /*lista não ordenada chamada "menu"*/
+    display: flex;
+}
+
+#menu li {
+    /*Colocando espaçamento nos elementos do menu superior*/
+    list-style: none;
+    margin: 0 20px;
+    white-space: nowrap;
+}
+
+#menu li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+#menu li a:hover {
+    /*Muda a cor do elemento da lista para preto ao passar o mouse em cima*/
+    color: #111111;
+}
+
+#menu li a::after {
+    /*Faz surgir uma barra branca em baixo do elemento da lista ao passar o mouse sobre ele*/
+    content: " ";
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+#menu li a:hover::after {
+    width: 100%;
+}
+
+#menu-mobile li {
+    list-style: none;
+    display: none;
+}
+
+
+/*conteúdo do site*/
+
+section {
+    display: flex;
+}
+
+.container {
+    /*classe de divs com títulos e parágrafos*/
+    max-width: 55%;
+    /*max-width: 700px;*/
+    min-height: 700px;
+    padding: 0 70px 0 40px;
+}
+
+.container h2 {
+    /*estilização dos títulos*/
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    line-height: 1.2em;
+}
+
+.container p {
+    /*estilização dos parágrafos*/
+    color: var(--color-text2);
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 6px;
+    margin-bottom: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.container button {
+    padding: 7px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 3px 0 #ff3300;
+    cursor: pointer;
+}
+
+.container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #ff3300;
+    text-shadow: 0 0 17px #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.container button:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 #ff3300;
+    transition: 0s;
+}
+
+
+/*rodapé*/
+
+footer {
+    /*position: absolute;*/
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 12px 20px;
+    /*background-color: var(--background-color);*/
+    transition: 0.3s ease-in-out;
+}
+
+footer nav {
+    /*classe das seções do rodapé*/
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: var(--background-color2);
+    transition: 0.3s ease-in-out;
+}
+
+footer nav:hover {
+    transform: translateY(-12px);
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav li {
+    margin-bottom: 6px;
+}
+
+footer nav h3 {
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+footer nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-text2);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+footer nav a:hover {
+    color: var(--color-text);
+    text-shadow: 0 0 20px #fff;
+}
+
+footer nav a::before {
+    opacity: 0;
+    position: absolute;
+    content: "-";
+    left: -10px;
+    color: var(--color-text2);
+}
+
+footer nav a:hover::before {
+    opacity: 1;
+    position: absolute;
+    content: "-";
+    left: -10px;
+    color: var(--color-text2);
+    transition: 0.3s ease-in-out;
+}
+
+footer nav p {
+    cursor: pointer;
+    position: relative;
+    color: var(--color-text2);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+footer nav p:hover {
+    color: var(--color-text);
+    text-shadow: 0 0 20px #fff;
+}
+
+footer nav p::before {
+    opacity: 0;
+    position: absolute;
+    content: "-";
+    left: -10px;
+    color: var(--color-text2);
+}
+
+footer nav p:hover::before {
+    opacity: 1;
+    position: absolute;
+    content: "-";
+    left: -10px;
+    color: var(--color-text2);
+    transition: 0.3s ease-in-out;
+}
+
+
+/*Ajustes 1133px*/
+
+@media screen and (max-width: 1200px) {
+    footer {
+        background-color: var(--background-color2);
+    }
+    footer nav {
+        background-color: transparent;
+    }
+    footer nav:hover {
+        transform: translateY(0px);
+    }
+}
+
+
+/*Tablet*/
+
+@media screen and (max-width: 959px) {
+    /*oculta a imagem flutuante*/
+    figure .selected {
+        opacity: 0;
+    }
+    #button-menu {
+        display: inline;
+    }
+    #feltz {
+        margin-right: 0;
+    }
+    #feltz:hover {
+        text-shadow: 0 0 0 #fff;
+    }
+    #menu {
+        display: none;
+    }
+    .darklabel {
+        font-size: 14px;
+    }
+    .darklabel:hover {
+        color: #111111;
+        text-shadow: 0 0 0 #fff;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .container h2 {
+        font-size: 6vw;
+    }
+}
+
+
+/*Ajustes 500px*/
+
+@media screen and (max-width: 500px) {
+    .darklabel::after {
+        display: block;
+    }
+}
+
+
+/*Celular*/
+
+@media screen and (max-width: 767px) {
+    /*muda a posição do footer para colunas*/
+    footer {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    footer nav {
+        width: 100%;
+    }
+}
