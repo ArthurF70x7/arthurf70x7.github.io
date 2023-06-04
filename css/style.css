@@ -485,7 +485,7 @@ footer nav p:hover::before {
     }*/
     .container button {
         padding: 6px 12px;
-        font-size: 12px;
+        font-size: 18px;
     }
     footer {
         flex-direction: column;
