@@ -195,14 +195,20 @@ header nav {
     display: flex;
 }
 
-#menu li {
+#menu .item {
     /*Colocando espaçamento nos elementos do menu superior*/
     list-style: none;
     margin: 0 20px;
+    padding: 17px 0;
     white-space: nowrap;
 }
 
-#menu li a {
+#menu .item:hover .dropdown {
+    /* revelar menu dropdown */
+    display: block;
+}
+
+#menu .item .link {
     position: relative;
     color: #fff;
     text-decoration: none;
@@ -211,12 +217,12 @@ header nav {
     transition: 0.3s ease-in-out;
 }
 
-#menu li a:hover {
+#menu .item .link:hover {
     /*Muda a cor do elemento da lista para preto ao passar o mouse em cima*/
     color: #111111;
 }
 
-#menu li a::after {
+#menu .item .link::after {
     /*Faz surgir uma barra branca em baixo do elemento da lista ao passar o mouse sobre ele*/
     content: " ";
     width: 0;
@@ -228,8 +234,37 @@ header nav {
     transition: 0.3s ease-in-out;
 }
 
-#menu li a:hover::after {
+#menu .item .link:hover::after {
     width: 100%;
+}
+
+
+/* menu dropdown */
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    padding: 12px 18px;
+    background-color: #ff6600cc;
+    backdrop-filter: blur(3px);
+    border-radius: 0 0 10px 10px;
+}
+
+.dropdown li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.dropdown li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dropdown li a:hover {
+    color: #111111;
 }
 
 
