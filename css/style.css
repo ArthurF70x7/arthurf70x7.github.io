@@ -81,6 +81,34 @@ figure .selected {
     color: #ff6600;
 }
 
+.topico {
+    position: relative;
+    color: #ff6600;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.nota {
+    position: relative;
+    left: 10px;
+    color: #ff3300;
+    font-weight: 500;
+}
+
+.nota::before {
+    content: " ";
+    width: 3px;
+    height: 100%;
+    background-color: #ff3300;
+    position: absolute;
+    top: 0;
+    left: -12px;
+}
+
+.enfase {
+    color: #ff6600;
+}
+
 
 /*mudar para o tema escuro*/
 
@@ -279,7 +307,7 @@ section {
     /*classe de divs com títulos e parágrafos*/
     max-width: 55%;
     min-height: 700px;
-    padding: 0 70px 0 40px;
+    padding: 0 70px 200px 40px;
 }
 
 .container h2 {
@@ -294,9 +322,7 @@ section {
     /*estilização dos parágrafos*/
     color: var(--color-text2);
     font-size: 20px;
-    font-weight: 700;
     padding-left: 6px;
-    margin-bottom: 50px;
     transition: 0.3s ease-in-out;
 }
 
@@ -306,6 +332,7 @@ section {
 
 .container button {
     padding: 7px 20px;
+    margin-top: 60px;
     background-color: #ff6600;
     color: #fff;
     font-size: 18px;
@@ -502,7 +529,7 @@ footer nav p:hover::before {
         font-size: 43px;
     }
     .container {
-        padding: 0 30px;
+        padding: 0 30px 200px 30px;
     }
     .container h2 {
         font-size: 33px;
