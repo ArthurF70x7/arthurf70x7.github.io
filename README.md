@@ -16,4 +16,4 @@ Fique à vontade para explorar o código-fonte, sugerir melhorias e compartilhar
 Juntos, podemos fazer a diferença na luta contra o câncer através da conscientização e da adoção de medidas preventivas.
 
 ## Github Pages
-arthurf70x7.github.io
+https://arthurf70x7.github.io/
