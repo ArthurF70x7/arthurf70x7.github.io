@@ -1,19 +1,26 @@
-# Site do Concurso de Programação Agrinho 2023: Prevenção do Câncer
-Bem-vindo ao repositório do site desenvolvido para o Concurso de Programação Agrinho 2023, que tem como objetivo promover a conscientização sobre a prevenção do câncer.
+# Portal Rural
 
-## Descrição do Projeto
-Este projeto foi criado com o intuito de fornecer informações valiosas sobre como se prevenir do câncer, enfatizando a importância da prevenção como medida eficaz para reduzir o impacto dessa doença na sociedade. Todo o conteúdo presente neste site é original, incluindo imagens, textos e inspirações de outros sites especializados no tema.
+## Descrição
 
-## Tecnologias Utilizadas
-O site foi desenvolvido utilizando as linguagens HTML, CSS e JavaScript, aproveitando os recursos dessas tecnologias para criar uma experiência de navegação moderna e interativa.
+Bem-vindo ao Portal Rural, um portal dedicado a conectar o conhecimento do campo com o urbano. Descubra insights sobre agricultura, pecuária, economia rural e mais, através de conteúdos educativos e interativos que visam inspirar e informar pessoas de todas as idades. Venha descobrir como podemos semear o futuro juntos, colhendo transformação para um mundo melhor ao explorar e valorizar o meio rural de maneira inovadora.
 
-## Conteúdo do Site
-O site aborda diversos tópicos relacionados à prevenção do câncer, incluindo informações sobre os principais tipos de câncer, fatores de risco, tratamentos e estratégias eficazes de prevenção. Além disso, são abordados temas como hábitos de vida saudáveis, alimentação balanceada, prática de exercícios físicos, controle do estresse e a importância de consultas médicas regulares.
+## Funcionalidades
 
-## Contribuições
-Fique à vontade para explorar o código-fonte, sugerir melhorias e compartilhar esse importante recurso com outras pessoas interessadas em promover a saúde e o bem-estar por meio da prevenção do câncer.
+* **Conteúdos Educativos**: Artigos e vídeos sobre práticas agrícolas, criação de animais e desenvolvimento sustentável.
+* **Economia Rural**: Análises e informações sobre mercados agrícolas e oportunidades de negócios no setor rural.
+* **Acessibilidade:** Plug-ins para facilitar o entendimento para todos, incluindo deficientes visuais e auditivos.
 
-Juntos, podemos fazer a diferença na luta contra o câncer através da conscientização e da adoção de medidas preventivas.
+## Redes Sociais
 
-## Github Pages
-https://arthurf70x7.github.io/
+* [Instagram](https://instagram.com/arthur_feltz)
+* [E-mail](mailto:arthurrangel563@gmail.com)
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+Venha descobrir como podemos semear o futuro juntos, colhendo transformação para um mundo melhor ao explorar e valorizar o meio rural de maneira inovadora.
+
+## Acessar site
+
+[Portal Rural](https://arthurf70x7.github.io/)
