@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Váriaveis */
+:root {
+/* --theme-1: #00a651;
+--theme-2: #00bf63;
+--theme-3: #7ed957; */
+
+--theme-1: #009420;
+--theme-2: #00b327;
+--theme-3: #00d62e;
+
+/* --light-1: ; */
+/* --light-2: ; */
+/* --light-3: ; */
+
+/* --dark-1: ; */
+/* --dark-2: ; */
+/* --dark-3: ; */
+
+/* --color-red: ; */
+/* --color-green: ; */
+/* --color-blue: ; */
+/* --color-orange: ; */
+/* --color-yellow: ; */
+/* --color-purple: ; */
+
+/* --shadow-regular: ; */
+
+/* --mg-button: ; */
+
+
+/* escalas de cinza */
+
+/* criar variações de padding, variaceis inteligentes... */
+/* escolher paletas profissionais, colocar efeitos profissionais, formas, cores, etc */
+
+    /* --primary: #673de6; */
+    --primary: #00d62e;
+    --primary-light: #00e632;
+    /* --primary-light: #36fc61; */
+    /* --primary-light: #9fffb4; */
+    /* --primary-lightest: #673de614; */
+    --primary-lightest: #00d62e36;
+    /* --primary-lightest: #00d62e18; */
+    --primary-dark: #02a024;
+    /* --primary-dark: #5025d1; */
+    --primary-charts: #b39ef3;
+    --white: #ffffff;
+    --gray: #727586;
+    --gray-light: #f2f3f6;
+    --gray-lightest: #7275861a;
+    --gray-dark: #36344d;
+    --gray-border: #dad9da;
+    --gray-border-dark: #b9b9b9;
+    --success: #00b090;
+    --success-light: #def4f0;
+    --success-dark: #008361;
+    --info-light: #e0f8ff;
+    --danger: #fc5185;
+    --danger-light: #ffe8ef;
+    --danger-dark: #d63163;
+    --warning: #ffcd35;
+    --warning-light: #fff8e2;
+    --warning-dark: #fea419;
+    --warning-dark-2: #9f6000;
+    --meteorite: #8c85ff;
+    --meteorite-light: #d5dfff;
+    --meteorite-gray: #dadce03d;
+    --meteorite-dark: #2f1c6a;
+    --light: #ffffff;
+    --dark: #1d1e20;
+    --white-blue: #f4f5ff;
+    --primary-timer: #8564eb;
+    --black-timer: #343434;
+    --periwinkle: #c5cde9;
+
+
+    --side-margin: 90px;
+}
