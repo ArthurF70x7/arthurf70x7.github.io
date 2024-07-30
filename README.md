@@ -23,4 +23,4 @@ Venha descobrir como podemos semear o futuro juntos, colhendo transformação pa
 
 ## Acessar site
 
-[Portal Rural](https://arthurf70x7.github.io/)
+**[Portal Rural](https://arthurf70x7.github.io/)**
